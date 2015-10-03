@@ -184,7 +184,7 @@ a:hover {
   #main #page-lineup > .container ul > li .band-details {
     opacity: 0;
     position: absolute;
-    top: -200px;
+    top: -140px;
     width: 420px;
     left: 50%;
   }
@@ -233,4 +233,10 @@ a:hover {
 }
 #main #page-contact > .container address {
   font-size: 22px;
+}
+@media (min-width: 768px) {
+  #main #page-contact > .container .haftungsausschluss br:first-of-type,
+  #main #page-contact > .container .disclaimer br:first-of-type {
+    display: none;
+  }
 }

@@ -33,16 +33,16 @@ function initSkrollr() {
 }
 
 function initScenes(resize) {
-	var pageBands = $("#page-bands");
+	var pageInfo = $("#page-info");
 
 	if (resize) {
-		viewportHeight = pageBands.height();
-		viewportWidth = pageBands.width();
+		viewportHeight = pageInfo.height();
+		viewportWidth = pageInfo.width();
 		skr.destroy();
 	}
 
-	//height of page depends on nr of sections
-	var _bodyHeight = Math.floor(viewportHeight * owfScenes) + "px";
+	var _bodyHeight = Math.floor(viewportHeight * owfScenes);
+	_bodyHeight += 650;
 	$("body").css("height", _bodyHeight);
 
 	//set start page height
