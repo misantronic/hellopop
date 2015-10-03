@@ -1,7 +1,21 @@
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Lora', serif;
+  font-family: Arial, sans-serif;
+  font-size: 17px;
+  color: #333;
+  line-height: 170%;
+}
+p {
+  margin: 0 0 20px;
+}
+a,
+a:active,
+a:link {
+  color: #333;
+}
+a:hover {
+  color: #000;
 }
 #main {
   width: 100%;
@@ -15,36 +29,180 @@ body {
   overflow: hidden;
   background: #FFF;
 }
-#main .page h1 {
-  color: #FFF;
+#main .page > .container h1 {
+  font-size: 52px;
+  margin-bottom: 15px;
+  letter-spacing: 3px;
+}
+#main .page > .container .band-details {
+  font-size: 17px;
+  line-height: 125%;
   text-align: center;
-  margin: 80px 0 40px;
-  font-size: 38px;
+  transition: opacity 0.25s linear 0.1s;
+}
+#main .page > .container .band-details > h2 {
+  background-repeat: no-repeat;
+  background-position: center top;
+  font-size: 17px;
+  text-transform: uppercase;
+  padding: 175px 0 0;
+}
+@media (max-width: 991px) {
+  #main .page .parallax-image {
+    display: none;
+  }
 }
 #main #page-start {
   z-index: 100;
   background: #66CC9A;
 }
-#main #page-start h1 {
+#main #page-start > .container {
+  padding-left: 0;
+  height: 100%;
+}
+#main #page-start > .container h1 {
   width: 100%;
-  height: 500px;
+  height: 100%;
   text-indent: -10000px;
   overflow: hidden;
-  background: url(../img/logo.jpg) no-repeat center top;
+  background: url(../img/logo.jpg) no-repeat center center;
+  margin: -50px 0 0 0;
+}
+@media (max-width: 767px) {
+  #main #page-start > .container h1 {
+    background-position-x: 100%;
+  }
 }
 #main #page-info {
   z-index: 90;
-  background: lightcoral;
+  background: #dbbead;
+}
+#main #page-info > .container {
+  padding-top: 2vh;
+}
+@media (min-width: 992px) {
+  #main #page-info > .container {
+    padding-top: 140px;
+  }
+}
+#main #page-info > .container h1 {
+  margin: 15px;
+  padding-top: 0;
+  background: none;
+  text-indent: 0;
+}
+@media (min-width: 992px) {
+  #main #page-info > .container h1 {
+    padding-top: 230px;
+    background: url(../img/cloud-sm.png) no-repeat left top;
+    text-indent: 120px;
+    margin: -50px 0 0 0;
+  }
 }
 #main #page-lineup {
   z-index: 80;
-  background: lightpink;
+  background: lightyellow;
+}
+@media (max-width: 991px) {
+  #main #page-lineup > .container h1 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+@media (min-width: 992px) {
+  #main #page-lineup > .container h1 {
+    padding: 20px 0 115px 15px;
+    margin: 10px 0 0 0;
+    background: url(../img/triangle-green.png) no-repeat left top;
+  }
+}
+#main #page-lineup > .container ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+#main #page-lineup > .container ul > li {
+  margin-bottom: 25px;
+}
+@media (min-width: 992px) {
+  #main #page-lineup > .container ul > li {
+    font-size: 22px;
+  }
+  #main #page-lineup > .container ul > li .location {
+    width: 80px;
+  }
+}
+#main #page-lineup > .container ul > li time {
+  display: inline-block;
+  margin-right: 25px;
+  text-transform: uppercase;
+}
+#main #page-lineup > .container ul > li .location {
+  display: inline-block;
+  margin-right: 25px;
+  text-transform: uppercase;
+}
+#main #page-lineup > .container ul > li .band {
+  display: inline-block;
+  text-transform: uppercase;
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: normal;
+}
+#main #page-lineup > .container ul > li .band + input {
+  display: none;
+}
+@media (max-width: 991px) {
+  #main #page-lineup > .container ul > li .band + input + .band-details {
+    display: none;
+  }
+  #main #page-lineup > .container ul > li .band + input:checked + .band-details {
+    display: block;
+  }
+}
+@media (min-width: 768px) {
+  #main #page-lineup > .container ul > li .band-details {
+    opacity: 0;
+    position: absolute;
+    top: -200px;
+    width: 420px;
+    left: 50%;
+  }
+}
+@media (min-width: 768px) {
+  #main #page-lineup > .container ul > li .band:hover + input + .band-details {
+    opacity: 1;
+  }
 }
 #main #page-bands {
   z-index: 70;
   background: lightgreen;
 }
+#main #page-bands .band-details {
+  height: auto;
+}
+@media (min-width: 768px) {
+  #main #page-bands .band-details {
+    height: 550px;
+  }
+}
+@media (min-width: 992px) {
+  #main #page-bands .band-details {
+    height: 530px;
+  }
+}
 #main #page-contact {
   z-index: 60;
-  background: lightskyblue;
+  background: lightyellow;
+}
+#main #page-contact > .container .container-contact {
+  text-align: right;
+}
+#main #page-contact > .container .container-contact h1 {
+  background: url(../img/triangle2-green.png) no-repeat right top;
+  padding: 20px 0 40px;
+  margin: 10px 0 0;
+}
+#main #page-contact > .container address {
+  font-size: 22px;
 }

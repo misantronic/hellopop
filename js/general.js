@@ -35,14 +35,6 @@ function initScenes(resize) {
 	//set start page height
 	$("#page-start").css("height", viewportHeight + "px");
 
-	//set video height
-	//if(viewportHeight < viewportWidth)
-	//{
-	//	$(".aftermovie").css("height", viewportHeight + "px");
-	//} else {
-	//	$(".aftermovie").css("width", viewportWidth + "px");
-	//}
-
 	//snow scene animation
 	var h = $("#page-bands").height();
 

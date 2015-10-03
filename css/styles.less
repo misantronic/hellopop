@@ -1,7 +1,24 @@
+@import "variables";
+
 body {
 	padding: 0;
 	margin: 0;
-	font-family: 'Lora', serif;
+	font-family: Arial, sans-serif;
+	font-size: 17px;
+	color: #333;
+	line-height: 170%;
+}
+
+p {
+	margin: 0 0 20px;
+}
+
+a, a:active, a:link {
+	color: #333;
+}
+
+a:hover {
+	color: #000;
 }
 
 #main {
@@ -16,11 +33,35 @@ body {
 		overflow: hidden;
 		background: #FFF;
 
-		h1 {
-			color: #FFF;
-			text-align: center;
-			margin: 80px 0 40px;
-			font-size: 38px;
+		> .container {
+
+			h1 {
+				font-size: 52px;
+				margin-bottom: 15px;
+				letter-spacing: 3px;
+			}
+
+			.band-details {
+				font-size: 17px;
+				line-height: 125%;
+				text-align: center;
+
+				> h2 {
+					background-repeat: no-repeat;
+					background-position: center top;
+					font-size: 17px;
+					text-transform: uppercase;
+					padding: 175px 0 0;
+				}
+
+				transition: opacity 0.25s linear 0.1s;
+			}
+		}
+
+		.parallax-image {
+			@media (max-width: @screen-sm-max) {
+				display: none;
+			}
 		}
 	}
 
@@ -28,33 +69,176 @@ body {
 		z-index: 100;
 		background: #66CC9A;
 
-		h1 {
-			width: 100%;
-			height: 500px;
-			text-indent: -10000px;
-			overflow: hidden;
-			background: url(../img/logo.jpg) no-repeat center top;
+		> .container {
+			padding-left: 0;
+			height: 100%;
+
+			h1 {
+				width: 100%;
+				height: 100%;
+				text-indent: -10000px;
+				overflow: hidden;
+				background: url(../img/logo.jpg) no-repeat center center;
+				margin: -50px 0 0 0;
+
+				@media (max-width: @screen-xs-max) {
+					background-position-x: 100%;
+				}
+			}
 		}
 	}
 
 	#page-info {
 		z-index: 90;
-		background: lightcoral;
+		background: #dbbead;
+
+		> .container {
+			padding-top: 2vh;
+
+			@media (min-width: @screen-md-min) {
+				padding-top: 140px;
+			}
+
+			h1 {
+				margin: 15px;
+				padding-top: 0;
+				background: none;
+				text-indent: 0;
+
+				@media (min-width: @screen-md-min) {
+					padding-top: 230px;
+					background: url(../img/cloud-sm.png) no-repeat left top;
+					text-indent: 120px;
+					margin: -50px 0 0 0;
+				}
+			}
+		}
 	}
 
 	#page-lineup {
 		z-index: 80;
-		background: lightpink;
+		background: lightyellow;
+
+		> .container {
+			h1 {
+				@media (max-width: @screen-sm-max) {
+					margin-left: 0;
+					margin-right: 0;
+				}
+
+				@media (min-width: @screen-md-min) {
+					padding: 20px 0 115px 15px;
+					margin: 10px 0 0 0;
+					background: url(../img/triangle-green.png) no-repeat left top;
+				}
+			}
+
+			ul {
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+
+				> li {
+					margin-bottom: 25px;
+
+					@media (min-width: @screen-md-min) {
+						font-size: 22px;
+
+						.location {
+							width: 80px;
+						}
+					}
+
+					time {
+						display: inline-block;
+						margin-right: 25px;
+						text-transform: uppercase;
+					}
+
+					.location {
+						display: inline-block;
+						margin-right: 25px;
+						text-transform: uppercase;
+					}
+
+					.band {
+						display: inline-block;
+						text-transform: uppercase;
+						text-decoration: underline;
+						cursor: pointer;
+						font-weight: normal;
+
+						+ input {
+							display: none;
+
+							@media (max-width: @screen-sm-max) {
+								+ .band-details {
+									display: none;
+								}
+
+								&:checked + .band-details {
+									display: block;
+								}
+							}
+						}
+					}
+
+					.band-details {
+						@media (min-width: @screen-sm-min) {
+							opacity: 0;
+							position: absolute;
+							top: -200px;
+							width: 420px;
+							left: 50%;
+						}
+					}
+
+					@media (min-width: @screen-sm-min) {
+						.band:hover + input + .band-details {
+							opacity: 1;
+						}
+					}
+				}
+			}
+		}
 	}
 
 	#page-bands {
 		z-index: 70;
 		background: lightgreen;
+
+		.band-details {
+			height: auto;
+
+			@media (min-width: @screen-sm-min) {
+				height: 550px;
+			}
+
+			@media (min-width: @screen-md-min) {
+				height: 530px;
+			}
+		}
 	}
 
 	#page-contact {
 		z-index: 60;
-		background: lightskyblue;
+		background: lightyellow;
+
+		> .container {
+			.container-contact {
+				text-align: right;
+
+				h1 {
+					background: url(../img/triangle2-green.png) no-repeat right top;
+					padding: 20px 0 40px;
+					margin: 10px 0 0;
+				}
+			}
+
+			address {
+				font-size: 22px;
+			}
+		}
 	}
 
 }
