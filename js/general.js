@@ -1,13 +1,24 @@
 var owfScenes = 5;
 var viewportHeight = $(window).height();
 var viewportWidth = $(window).width();
-var skr = ""; //skrrollr instance
+var skr = "";
 
 /**
  * Init skroller
  * @return {[type]}
  */
 function initSkrollr() {
+	var body = $('body');
+
+	if(window.innerWidth < 768) {
+		if(skr) skr.destroy();
+		body.addClass('mobile');
+
+		return;
+	}
+
+	body.removeClass('mobile');
+
 	var constantsData = {};
 
 	for (i = 1; i <= owfScenes; i++) {
@@ -22,9 +33,11 @@ function initSkrollr() {
 }
 
 function initScenes(resize) {
+	var pageBands = $("#page-bands");
+
 	if (resize) {
-		viewportHeight = $("#page-bands").height();
-		viewportWidth = $("#page-bands").width();
+		viewportHeight = pageBands.height();
+		viewportWidth = pageBands.width();
 		skr.destroy();
 	}
 
@@ -35,9 +48,6 @@ function initScenes(resize) {
 	//set start page height
 	$("#page-start").css("height", viewportHeight + "px");
 
-	//snow scene animation
-	var h = $("#page-bands").height();
-
 	//skrollr
 	initSkrollr();
 }
@@ -47,5 +57,7 @@ $(document).ready(function () {
 });
 
 window.onresize = function () {
+	if(!skr) initSkrollr();
+
 	initScenes(true);
 };

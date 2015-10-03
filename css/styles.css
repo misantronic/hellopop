@@ -2,9 +2,12 @@ body {
   padding: 0;
   margin: 0;
   font-family: Arial, sans-serif;
-  font-size: 17px;
+  font-size: 14px;
   color: #333;
   line-height: 170%;
+}
+body.mobile {
+  height: auto !important;
 }
 p {
   margin: 0 0 20px;
@@ -22,6 +25,9 @@ a:hover {
   height: 100%;
   position: fixed;
 }
+.mobile #main {
+  position: static;
+}
 #main .page {
   width: 100%;
   height: 100%;
@@ -30,13 +36,15 @@ a:hover {
   background: #FFF;
 }
 #main .page > .container h1 {
-  font-size: 52px;
+  font-size: 44px;
   margin-bottom: 15px;
   letter-spacing: 3px;
 }
+#main .page > .container h2 {
+  font-size: 24px;
+}
 #main .page > .container .band-details {
-  font-size: 17px;
-  line-height: 125%;
+  font-size: 14px;
   text-align: center;
   transition: opacity 0.25s linear 0.1s;
 }
@@ -47,6 +55,9 @@ a:hover {
   text-transform: uppercase;
   padding: 175px 0 0;
 }
+#main .page > .container .band-details > p {
+  margin-bottom: 15px;
+}
 @media (max-width: 991px) {
   #main .page .parallax-image {
     display: none;
@@ -55,6 +66,9 @@ a:hover {
 #main #page-start {
   z-index: 100;
   background: #66CC9A;
+}
+.mobile #main #page-start {
+  position: static;
 }
 #main #page-start > .container {
   padding-left: 0;
@@ -66,7 +80,7 @@ a:hover {
   text-indent: -10000px;
   overflow: hidden;
   background: url(../img/logo.jpg) no-repeat center center;
-  margin: -50px 0 0 0;
+  margin: 0;
 }
 @media (max-width: 767px) {
   #main #page-start > .container h1 {
@@ -77,6 +91,10 @@ a:hover {
   z-index: 90;
   background: #dbbead;
 }
+.mobile #main #page-info {
+  position: static;
+  height: auto !important;
+}
 #main #page-info > .container {
   padding-top: 2vh;
 }
@@ -86,7 +104,6 @@ a:hover {
   }
 }
 #main #page-info > .container h1 {
-  margin: 15px;
   padding-top: 0;
   background: none;
   text-indent: 0;
@@ -102,6 +119,10 @@ a:hover {
 #main #page-lineup {
   z-index: 80;
   background: lightyellow;
+}
+.mobile #main #page-lineup {
+  position: static;
+  height: auto !important;
 }
 @media (max-width: 991px) {
   #main #page-lineup > .container h1 {
@@ -122,11 +143,11 @@ a:hover {
   padding: 0;
 }
 #main #page-lineup > .container ul > li {
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 }
 @media (min-width: 992px) {
   #main #page-lineup > .container ul > li {
-    font-size: 22px;
+    font-size: 18px;
   }
   #main #page-lineup > .container ul > li .location {
     width: 80px;
@@ -145,7 +166,6 @@ a:hover {
 #main #page-lineup > .container ul > li .band {
   display: inline-block;
   text-transform: uppercase;
-  text-decoration: underline;
   cursor: pointer;
   font-weight: normal;
 }
@@ -178,30 +198,38 @@ a:hover {
   z-index: 70;
   background: lightgreen;
 }
+.mobile #main #page-bands {
+  position: static;
+  height: auto !important;
+}
 #main #page-bands .band-details {
   height: auto;
 }
 @media (min-width: 768px) {
   #main #page-bands .band-details {
-    height: 550px;
+    height: 540px;
   }
 }
 @media (min-width: 992px) {
   #main #page-bands .band-details {
-    height: 530px;
+    height: 540px;
   }
 }
 #main #page-contact {
   z-index: 60;
   background: lightyellow;
 }
-#main #page-contact > .container .container-contact {
-  text-align: right;
+.mobile #main #page-contact {
+  position: static;
+  height: auto !important;
 }
-#main #page-contact > .container .container-contact h1 {
-  background: url(../img/triangle2-green.png) no-repeat right top;
-  padding: 20px 0 40px;
-  margin: 10px 0 0;
+@media (min-width: 768px) {
+  #main #page-contact > .container .container-contact h1 {
+    padding: 140px 0 0 90px;
+    background: url(../img/cloud-sm.png) no-repeat left top;
+    background-size: 20%;
+    margin-left: -90px;
+  }
 }
 #main #page-contact > .container address {
   font-size: 22px;

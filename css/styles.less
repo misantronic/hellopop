@@ -4,9 +4,13 @@ body {
 	padding: 0;
 	margin: 0;
 	font-family: Arial, sans-serif;
-	font-size: 17px;
+	font-size: 14px;
 	color: #333;
 	line-height: 170%;
+
+	&.mobile {
+		height: auto !important;
+	}
 }
 
 p {
@@ -26,6 +30,10 @@ a:hover {
 	height: 100%;
 	position: fixed;
 
+	.mobile & {
+		position: static;
+	}
+
 	.page {
 		width: 100%;
 		height: 100%;
@@ -36,14 +44,17 @@ a:hover {
 		> .container {
 
 			h1 {
-				font-size: 52px;
+				font-size: 44px;
 				margin-bottom: 15px;
 				letter-spacing: 3px;
 			}
 
+			h2 {
+				font-size: 24px;
+			}
+
 			.band-details {
-				font-size: 17px;
-				line-height: 125%;
+				font-size: 14px;
 				text-align: center;
 
 				> h2 {
@@ -52,6 +63,10 @@ a:hover {
 					font-size: 17px;
 					text-transform: uppercase;
 					padding: 175px 0 0;
+				}
+
+				> p {
+					margin-bottom: 15px;
 				}
 
 				transition: opacity 0.25s linear 0.1s;
@@ -69,6 +84,10 @@ a:hover {
 		z-index: 100;
 		background: #66CC9A;
 
+		.mobile & {
+			position: static;
+		}
+
 		> .container {
 			padding-left: 0;
 			height: 100%;
@@ -79,7 +98,7 @@ a:hover {
 				text-indent: -10000px;
 				overflow: hidden;
 				background: url(../img/logo.jpg) no-repeat center center;
-				margin: -50px 0 0 0;
+				margin: 0;
 
 				@media (max-width: @screen-xs-max) {
 					background-position-x: 100%;
@@ -92,6 +111,11 @@ a:hover {
 		z-index: 90;
 		background: #dbbead;
 
+		.mobile & {
+			position: static;
+			height: auto !important;
+		}
+
 		> .container {
 			padding-top: 2vh;
 
@@ -100,7 +124,6 @@ a:hover {
 			}
 
 			h1 {
-				margin: 15px;
 				padding-top: 0;
 				background: none;
 				text-indent: 0;
@@ -118,6 +141,11 @@ a:hover {
 	#page-lineup {
 		z-index: 80;
 		background: lightyellow;
+
+		.mobile & {
+			position: static;
+			height: auto !important;
+		}
 
 		> .container {
 			h1 {
@@ -139,10 +167,10 @@ a:hover {
 				padding: 0;
 
 				> li {
-					margin-bottom: 25px;
+					margin-bottom: 15px;
 
 					@media (min-width: @screen-md-min) {
-						font-size: 22px;
+						font-size: 18px;
 
 						.location {
 							width: 80px;
@@ -164,7 +192,6 @@ a:hover {
 					.band {
 						display: inline-block;
 						text-transform: uppercase;
-						text-decoration: underline;
 						cursor: pointer;
 						font-weight: normal;
 
@@ -207,15 +234,20 @@ a:hover {
 		z-index: 70;
 		background: lightgreen;
 
+		.mobile & {
+			position: static;
+			height: auto !important;
+		}
+
 		.band-details {
 			height: auto;
 
 			@media (min-width: @screen-sm-min) {
-				height: 550px;
+				height: 540px;
 			}
 
 			@media (min-width: @screen-md-min) {
-				height: 530px;
+				height: 540px;
 			}
 		}
 	}
@@ -224,14 +256,20 @@ a:hover {
 		z-index: 60;
 		background: lightyellow;
 
+		.mobile & {
+			position: static;
+			height: auto !important;
+		}
+
 		> .container {
 			.container-contact {
-				text-align: right;
-
 				h1 {
-					background: url(../img/triangle2-green.png) no-repeat right top;
-					padding: 20px 0 40px;
-					margin: 10px 0 0;
+					@media (min-width: @screen-sm-min) {
+						padding: 140px 0 0 90px;
+						background: url(../img/cloud-sm.png) no-repeat left top;
+						background-size: 20%;
+						margin-left: -90px;
+					}
 				}
 			}
 
