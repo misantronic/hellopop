@@ -67,18 +67,19 @@ a:hover {
     display: none;
   }
 }
-#main #page-start {
+#main #home {
   z-index: 100;
   background: #66CC9A;
 }
-.mobile #main #page-start {
+.mobile #main #home {
   position: static;
 }
-#main #page-start > .container {
+#main #home > .container {
+  position: relative;
   padding-left: 0;
   height: 100%;
 }
-#main #page-start > .container h1 {
+#main #home > .container h1 {
   width: 100%;
   height: 100%;
   text-indent: -10000px;
@@ -87,105 +88,134 @@ a:hover {
   margin: 0;
 }
 @media (max-width: 767px) {
-  #main #page-start > .container h1 {
+  #main #home > .container h1 {
     background-position-x: 100%;
   }
 }
-#main #page-info {
+#main #home > .container .date {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -290px 0 0 -250px;
+  text-transform: uppercase;
+}
+@media (max-width: 767px) {
+  #main #home > .container .date {
+    margin-left: -100px;
+  }
+}
+#main #home > .container .links {
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  margin: 290px -240px 0 0;
+  text-transform: uppercase;
+}
+@media (max-width: 767px) {
+  #main #home > .container .links {
+    margin-right: -59px;
+  }
+}
+#main #info {
   z-index: 90;
   background: #dbbead;
 }
-.mobile #main #page-info {
+.mobile #main #info {
   position: static;
   height: auto !important;
 }
-#main #page-info > .container {
+#main #info > .container {
   padding-top: 2vh;
 }
 @media (min-width: 992px) {
-  #main #page-info > .container {
+  #main #info > .container {
     padding-top: 140px;
   }
 }
-#main #page-info > .container h1 {
+#main #info > .container h1 {
   padding-top: 0;
   background: none;
   text-indent: 0;
 }
 @media (min-width: 992px) {
-  #main #page-info > .container h1 {
+  #main #info > .container h1 {
     padding-top: 230px;
     background: url(../img/cloud-sm.png) no-repeat left top;
     text-indent: 120px;
     margin: -50px 0 0 0;
   }
 }
-#main #page-lineup {
+#main #lineup {
   z-index: 80;
   background: lightyellow;
 }
-.mobile #main #page-lineup {
+.mobile #main #lineup {
   position: static;
   height: auto !important;
 }
 @media (max-width: 991px) {
-  #main #page-lineup > .container h1 {
+  #main #lineup > .container h1 {
     margin-left: 0;
     margin-right: 0;
   }
 }
 @media (min-width: 992px) {
-  #main #page-lineup > .container h1 {
+  #main #lineup > .container h1 {
     padding: 20px 0 115px 15px;
     margin: 10px 0 0 0;
     background: url(../img/triangle-green.png) no-repeat left top;
   }
 }
-#main #page-lineup > .container ul {
+#main #lineup > .container ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
-#main #page-lineup > .container ul > li {
+#main #lineup > .container ul > li {
   margin-bottom: 15px;
 }
 @media (min-width: 992px) {
-  #main #page-lineup > .container ul > li {
+  #main #lineup > .container ul > li {
     font-size: 18px;
   }
-  #main #page-lineup > .container ul > li .location {
+  #main #lineup > .container ul > li .location {
     width: 80px;
   }
 }
-#main #page-lineup > .container ul > li time {
+#main #lineup > .container ul > li time {
   display: inline-block;
   margin-right: 25px;
   text-transform: uppercase;
 }
-#main #page-lineup > .container ul > li .location {
+#main #lineup > .container ul > li .location {
   display: inline-block;
   margin-right: 25px;
   text-transform: uppercase;
 }
-#main #page-lineup > .container ul > li .band {
+#main #lineup > .container ul > li .band {
   display: inline-block;
   text-transform: uppercase;
   cursor: pointer;
   font-weight: normal;
 }
-#main #page-lineup > .container ul > li .band + input {
+#main #lineup > .container ul > li .band:before {
+  content: '❯';
+  margin-right: 10px;
+  color: #C5C5B0;
+}
+#main #lineup > .container ul > li .band + input {
   display: none;
 }
 @media (max-width: 991px) {
-  #main #page-lineup > .container ul > li .band + input + .band-details {
+  #main #lineup > .container ul > li .band + input + .band-details {
     display: none;
   }
-  #main #page-lineup > .container ul > li .band + input:checked + .band-details {
+  #main #lineup > .container ul > li .band + input:checked + .band-details {
     display: block;
   }
 }
 @media (min-width: 768px) {
-  #main #page-lineup > .container ul > li .band-details {
+  #main #lineup > .container ul > li .band-details {
     opacity: 0;
     position: absolute;
     top: -140px;
@@ -194,53 +224,53 @@ a:hover {
   }
 }
 @media (min-width: 768px) {
-  #main #page-lineup > .container ul > li .band:hover + input + .band-details {
+  #main #lineup > .container ul > li .band:hover + input + .band-details {
     opacity: 1;
   }
 }
-#main #page-bands {
+#main #bands {
   z-index: 70;
   background: white;
 }
-.mobile #main #page-bands {
+@media (max-width: 767px) {
+  #main #bands {
+    display: none;
+  }
+}
+.mobile #main #bands {
   position: static;
   height: auto !important;
 }
-#main #page-bands .band-details {
+#main #bands .band-details {
   height: auto;
 }
 @media (min-width: 768px) {
-  #main #page-bands .band-details {
+  #main #bands .band-details {
     height: 540px;
   }
 }
-@media (min-width: 992px) {
-  #main #page-bands .band-details {
-    height: 540px;
-  }
-}
-#main #page-contact {
-  z-index: 60;
+#main #contact {
+  z-index: 50;
   background: lightyellow;
 }
-.mobile #main #page-contact {
+.mobile #main #contact {
   position: static;
   height: auto !important;
 }
 @media (min-width: 768px) {
-  #main #page-contact > .container .container-contact h1 {
+  #main #contact > .container .container-contact h1 {
     padding: 140px 0 0 90px;
     background: url(../img/cloud-sm.png) no-repeat left top;
-    background-size: 20%;
+    background-size: 13%;
     margin-left: -90px;
   }
 }
-#main #page-contact > .container address {
+#main #contact > .container address {
   font-size: 22px;
 }
 @media (min-width: 768px) {
-  #main #page-contact > .container .haftungsausschluss br:first-of-type,
-  #main #page-contact > .container .disclaimer br:first-of-type {
+  #main #contact > .container .haftungsausschluss br:first-of-type,
+  #main #contact > .container .disclaimer br:first-of-type {
     display: none;
   }
 }

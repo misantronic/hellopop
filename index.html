@@ -3,20 +3,42 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
-	<title>hello pop</title>
+	<title>HELLO POP!</title>
+	<link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+	<link rel="manifest" href="favicon/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 	<div id="main">
 
-		<div class="page" id="page-start" data-0="height:100%;" data-_owf1="height:0%;">
+		<div class="page" id="home" data-_section1="height:0%;" data-emit-events>
 			<div class="container">
 				<h1>Hello pop</h1>
+				<div class="date">7. Nov | Stuttgart | Im Wizemann</div>
+				<div class="links">
+					<a href="http://hellopop.wlec.ag/index.php?view=bestplatz&id=6" target="_blank">Tickets</a> |
+					<a href="https://www.facebook.com/popnotpopconcerts" target="_blank">Facebook</a>
+				</div>
 			</div>
 		</div>
 
-		<div class="page" id="page-info" data-_owf1="height:100%;" data-_owf2="height:0%;">
+		<div class="page" id="info" data-_section2="height:0%;" data-emit-events>
 			<div class="container">
 				<div class="row">
 					<div class="col-md-4 col-sm-12">
@@ -49,7 +71,7 @@
 			</div>
 		</div>
 
-		<div class="page" id="page-lineup" data-_owf2="height:100%;" data-_owf3="height:0%;">
+		<div class="page" id="lineup" data-_section3="height:0%;" data-emit-events>
 			<div class="container">
 				<h1>zeitplan</h1>
 				<div class="row">
@@ -209,21 +231,28 @@
 				<div
 					class="parallax-image"
 					style="background-image:url(img/circle-sm.png); width: 85px; height: 169px; right: 40px; position: absolute; bottom: 15px; z-index: 5;"
+					data-anchor-target="#lineup"
+					data-100p="transform: translate3d(0px, -80%, 0px);"
+					data-300p="transform: translate3d(0px, 80%, 0px);"
 					></div>
 
 				<div
 					class="parallax-image"
 					style="background-image:url(img/triangle2-sm.png); width: 83px; height: 131px; position: absolute; right: 90px; bottom: 120px; z-index: 1;"
+					data-100p="transform: translate3d(0px, 80%, 0px);"
+					data-300p="transform: translate3d(0px, -80%, 0px);"
 					></div>
 
 				<div
 					class="parallax-image"
 					style="background-image:url(img/triangle-sm.png); width: 86px; height: 112px; position: absolute; bottom: 100px; right: 230px; z-index: 2;"
+					data-100p="transform: translate3d(0px, 20%, 0px);"
+					data-300p="transform: translate3d(0px, -140%, 0px);"
 					></div>
 			</div>
 		</div>
 
-		<div class="page" id="page-bands" data-_owf3="height:100%;" data-_owf4="height:0%;">
+		<div class="page" id="bands" data-_section4="height:0%;" data-emit-events>
 			<div class="container">
 				<h1>bands</h1>
 				<div class="col-xs-12 col-sm-6 col-md-4">
@@ -373,9 +402,9 @@
 			</div>
 		</div>
 
-		<div class="page" id="page-contact" data-_owf4="height:0%;" data-_owf5="height:100%;">
+		<div class="page" id="contact" data-_section5="height:0%;" data-emit-events>
 			<div class="container">
-				<div class="col-xs-12 col-md-offset-2 col-md-8">
+				<div class="col-xs-12">
 					<div class="container-contact">
 						<h1>kontakt</h1>
 						<div class="row">
@@ -392,7 +421,7 @@
 								Warschauer Str. 39/40<br/>
 								10243 Berlin
 							</address>
-							<div class="col-xs-12 col-sm-6 haftungsausschluss">
+							<div class="col-xs-12 col-sm-4 haftungsausschluss">
 								<br/>
 								<b>Haftungsausschluss</b><br/>
 								<br/>
@@ -402,8 +431,11 @@
 								<br/>
 								2. Verweise und Links<br/>
 								Bei direkten oder indirekten Verweisen auf fremde Webseiten (Hyperlinks), die außerhalb des Verantwortungsbereiches des Autors liegen, würde eine Haftungsverpflichtung ausschließlich in dem Fall in Kraft treten, in dem der Autor von den Inhalten Kenntnis hat und es ihm technisch möglich und zumutbar wäre, die Nutzung im Falle rechtswidriger Inhalte zu verhindern.
-								Der Autor erklärt hiermit ausdrücklich, dass zum Zeitpunkt der Linksetzung keine illegalen Inhalte auf den zu verlinkenden Seiten erkennbar waren. Auf die aktuelle und zukünftige Gestaltung, die Inhalte oder die Urheberschaft der verlinkten/verknüpften Seiten hat der Autor keinerlei Einfluss. Deshalb distanziert er sich hiermit ausdrücklich von allen Inhalten aller verlinkten /verknüpften Seiten, die nach der Linksetzung verändert wurden. Diese Feststellung gilt für alle innerhalb des eigenen Internetangebotes gesetzten Links und Verweise sowie für Fremdeinträge in vom Autor eingerichteten Gästebüchern, Diskussionsforen, Linkverzeichnissen, Mailinglisten und in allen anderen Formen von Datenbanken, auf deren Inhalt externe Schreibzugriffe möglich sind. Für illegale, fehlerhafte oder unvollständige Inhalte und insbesondere für Schäden, die aus der Nutzung oder Nichtnutzung solcherart dargebotener Informationen entstehen, haftet allein der Anbieter der Seite, auf welche verwiesen wurde, nicht derjenige, der über Links auf die jeweilige Veröffentlichung lediglich verweist.<br/>
-								<br/>
+								Der Autor erklärt hiermit ausdrücklich, dass zum Zeitpunkt der Linksetzung keine illegalen Inhalte auf den zu verlinkenden Seiten erkennbar waren. Auf die aktuelle und zukünftige Gestaltung, die Inhalte oder die Urheberschaft der verlinkten/verknüpften Seiten hat der Autor keinerlei Einfluss. Deshalb distanziert er sich hiermit ausdrücklich von allen Inhalten aller verlinkten /verknüpften Seiten, die nach der Linksetzung verändert wurden. Diese Feststellung gilt für alle innerhalb des eigenen Internetangebotes gesetzten Links und Verweise sowie für Fremdeinträge in vom Autor eingerichteten Gästebüchern, Diskussionsforen, Linkverzeichnissen, Mailinglisten und in allen anderen Formen von Datenbanken, auf deren Inhalt externe Schreibzugriffe möglich sind. Für illegale, fehlerhafte oder unvollständige Inhalte und insbesondere für Schäden, die aus der Nutzung oder Nichtnutzung solcherart dargebotener Informationen entstehen, haftet allein der Anbieter der Seite, auf welche verwiesen wurde, nicht derjenige, der über Links auf die jeweilige Veröffentlichung lediglich verweist.
+								<br/><br/>
+							</div>
+							<div class="col-xs-12 col-sm-4 haftungsausschluss">
+								<br/><br/><br/>
 								3. Urheber- und Kennzeichenrecht<br/>
 								Der Autor ist bestrebt, in allen Publikationen die Urheberrechte der verwendeten Grafiken, Tondokumente, Videosequenzen und Texte zu beachten, von ihm selbst erstellte Grafiken, Tondokumente, Videosequenzen und Texte zu nutzen oder auf lizenzfreie Grafiken, Tondokumente, Videosequenzen und Texte zurückzugreifen.
 								Alle innerhalb des Internetangebotes genannten und ggf. durch Dritte geschützten Marken- und Warenzeichen unterliegen uneingeschränkt den Bestimmungen des jeweils gültigen Kennzeichenrechts und den Besitzrechten der jeweiligen eingetragenen Eigentümer. Allein aufgrund der bloßen Nennung ist nicht der Schluss zu ziehen, dass Markenzeichen nicht durch Rechte Dritter geschützt sind!
@@ -416,7 +448,7 @@
 								Dieser Haftungsausschluss ist als Teil des Internetangebotes zu betrachten, von dem aus auf diese Seite verwiesen wurde. Sofern Teile oder einzelne Formulierungen dieses Textes der geltenden Rechtslage nicht, nicht mehr oder nicht vollständig entsprechen sollten, bleiben die übrigen Teile des Dokumentes in ihrem Inhalt und ihrer Gültigkeit davon unberührt.
 								<br/><br/>
 							</div>
-							<div class="col-xs-12 col-sm-6 disclaimer">
+							<div class="col-xs-12 col-sm-4 disclaimer">
 								<br/>
 								<b>Disclaimer</b><br/>
 								<br/>
@@ -436,30 +468,37 @@
 								<br/>
 								5. Legal validity of this disclaimer<br/>
 								This disclaimer is to be regarded as part of the internet publication which you were referred from. If sections or individual terms of this statement are not legal or correct, the content or validity of the other parts remain uninfluenced by this fact.
+								<br/><br/>
 							</div>
 						</div>
 					</div>
 				</div>
 
 				<div
-						class="parallax-image"
-						style="background-image:url(img/triangle3-green.png); width: 133px; height: 151px; left: 40px; top: 470px; position: absolute"
-						></div>
+					class="parallax-image"
+					style="background-image:url(img/triangle3-green.png); width: 133px; height: 151px; left: -140px; top: 470px; position: absolute"
+					data-400p="transform: translate3d(0px, -80%, 0px);"
+					data-600p="transform: translate3d(0px, 80%, 0px);"
+					></div>
 
 				<div
-						class="parallax-image"
-						style="background-image:url(img/triangle3-sm.png); width: 117px; height: 96px; left: 50px; bottom: 80px; position: absolute"
-						></div>
+					class="parallax-image"
+					style="background-image:url(img/triangle3-sm.png); width: 117px; height: 96px; left: -110px; bottom: 80px; position: absolute"
+					></div>
 
 				<div
-						class="parallax-image"
-						style="background-image:url(img/triangle4-sm.png); width: 92px; height: 182px; right: 90px; top: 40px; position: absolute"
-						></div>
+					class="parallax-image"
+					style="background-image:url(img/triangle4-sm.png); width: 92px; height: 182px; right: 90px; top: 40px; position: absolute"
+					data-400p="transform: translate3d(0px, -80%, 0px);"
+					data-600p="transform: translate3d(0px, 80%, 0px);"
+					></div>
 
 				<div
-						class="parallax-image"
-						style="background-image:url(img/circle2-sm.png); width: 142px; height: 149px; right: 40px; top: 126px; position: absolute;"
-						></div>
+					class="parallax-image"
+					style="background-image:url(img/circle2-sm.png); width: 142px; height: 149px; right: 40px; top: 126px; position: absolute;"
+					data-400p="transform: translate3d(0px, -70%, 0px);"
+					data-600p="transform: translate3d(0px, 90%, 0px);"
+					></div>
 
 			</div>
 		</div>

@@ -1,9 +1,9 @@
-var owfScenes = 5;
 var viewportHeight = 0;
 var viewportWidth = 0;
 var skr;
 
 function initScenes() {
+	var pages = $('.page');
 	var body = $('body');
 	var bodyHeight = 0;
 
@@ -12,7 +12,7 @@ function initScenes() {
 	viewportHeight = innerHeight;
 	viewportWidth = innerWidth;
 
-	$('.page').each(function() {
+	pages.each(function() {
 		bodyHeight += Math.max(viewportHeight, $(this).children('.container').height());
 	});
 
@@ -35,12 +35,12 @@ function initScenes() {
 	var curHeight = 0;
 	var curP = 0;
 
-	for (i = 1; i <= owfScenes; i++) {
+	for (i = 1; i <= pages.length; i++) {
 		var page = $('.page:eq(' + (i - 1) + ')');
 		var height = Math.max(page.children('.container').height(), viewportHeight);
 		var pHeight = Math.round(height / viewportHeight * 100);
 
-		page.attr('data-_owf' + (i - 1), 'height:' + pHeight + '%');
+		page.attr('data-_section' + (i - 1), 'height:' + pHeight + '%');
 
 		if (pHeight > 100) {
 			var pStart = curP;
@@ -54,13 +54,16 @@ function initScenes() {
 		curHeight += height;
 		curP += pHeight;
 
-		constantsData["owf" + i] = curHeight;
+		constantsData["section" + i] = curHeight;
 	}
 
 	skr = skrollr.init({
 		forceHeight: false,
 		constants: constantsData,
-		smoothScrolling: true
+		smoothScrolling: true,
+		keyframe: function(element) {
+			location.hash = $(element).attr('id');
+		}
 	});
 }
 

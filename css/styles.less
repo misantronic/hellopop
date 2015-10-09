@@ -85,7 +85,7 @@ a:hover {
 		}
 	}
 
-	#page-start {
+	#home {
 		z-index: 100;
 		background: #66CC9A;
 
@@ -94,6 +94,8 @@ a:hover {
 		}
 
 		> .container {
+			position: relative;
+
 			padding-left: 0;
 			height: 100%;
 
@@ -109,10 +111,34 @@ a:hover {
 					background-position-x: 100%;
 				}
 			}
+
+			.date {
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				margin: -290px 0 0 -250px;
+				text-transform: uppercase;
+
+				@media (max-width: @screen-xs-max) {
+					margin-left: -100px;
+				}
+			}
+
+			.links {
+				position: absolute;
+				right: 50%;
+				top: 50%;
+				margin: 290px -240px 0 0;
+				text-transform: uppercase;
+
+				@media (max-width: @screen-xs-max) {
+					margin-right: -59px;
+				}
+			}
 		}
 	}
 
-	#page-info {
+	#info {
 		z-index: 90;
 		background: #dbbead;
 
@@ -143,7 +169,7 @@ a:hover {
 		}
 	}
 
-	#page-lineup {
+	#lineup {
 		z-index: 80;
 		background: lightyellow;
 
@@ -200,6 +226,12 @@ a:hover {
 						cursor: pointer;
 						font-weight: normal;
 
+						&:before {
+							content: '❯';
+							margin-right: 10px;
+							color: #C5C5B0;
+						}
+
 						+ input {
 							display: none;
 
@@ -235,9 +267,13 @@ a:hover {
 		}
 	}
 
-	#page-bands {
+	#bands {
 		z-index: 70;
 		background: white;
+
+		@media (max-width: @screen-xs-max) {
+			display: none;
+		}
 
 		.mobile & {
 			position: static;
@@ -250,15 +286,11 @@ a:hover {
 			@media (min-width: @screen-sm-min) {
 				height: 540px;
 			}
-
-			@media (min-width: @screen-md-min) {
-				height: 540px;
-			}
 		}
 	}
 
-	#page-contact {
-		z-index: 60;
+	#contact {
+		z-index: 50;
 		background: lightyellow;
 
 		.mobile & {
@@ -272,7 +304,7 @@ a:hover {
 					@media (min-width: @screen-sm-min) {
 						padding: 140px 0 0 90px;
 						background: url(../img/cloud-sm.png) no-repeat left top;
-						background-size: 20%;
+						background-size: 13%;
 						margin-left: -90px;
 					}
 				}
