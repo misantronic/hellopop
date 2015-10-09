@@ -196,7 +196,7 @@ a:hover {
 }
 #main #page-bands {
   z-index: 70;
-  background: lightgreen;
+  background: white;
 }
 .mobile #main #page-bands {
   position: static;
