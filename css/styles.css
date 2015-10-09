@@ -43,6 +43,10 @@ a:hover {
 #main .page > .container h2 {
   font-size: 24px;
 }
+#main .page > .container > .row {
+  z-index: 50;
+  position: relative;
+}
 #main .page > .container .band-details {
   font-size: 14px;
   text-align: center;
