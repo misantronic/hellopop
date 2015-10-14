@@ -114,6 +114,7 @@ a:hover {
 
 				@media (max-width: @screen-xs-max) {
 					background-position-x: 100%;
+					height: 725px;
 				}
 			}
 
@@ -309,6 +310,11 @@ a:hover {
 		z-index: 60;
 		background: #62D09F;
 
+		.mobile & {
+			position: static;
+			height: auto !important;
+		}
+
 		h2 {
 			line-height: 150%;
 			margin-bottom: 40px;
@@ -317,6 +323,7 @@ a:hover {
 		form {
 			background: #fbfbfb;
 			padding: 20px;
+			margin-bottom: 25px;
 
 			table {
 				width: 100%;
@@ -358,11 +365,11 @@ a:hover {
 				font-size: 22px;
 			}
 
-			@media (min-width: @screen-sm-min) {
-				.haftungsausschluss, .disclaimer {
-					br:first-of-type {
-						display: none;
-					}
+			.haftungsausschluss, .disclaimer {
+				margin-bottom: 20px;
+
+				> a {
+					text-decoration: underline;
 				}
 			}
 		}
