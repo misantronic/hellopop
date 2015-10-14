@@ -67,6 +67,13 @@ function initScenes() {
 	});
 }
 
-$(document).ready(initScenes);
+$(document).ready(function() {
+	initScenes();
+
+	// form
+	$('select#tickets-cnt-1').on('change', function() {
+		$('#tickets-summary').text(($(this).val() - 1) * 20 +",00");
+	})
+});
 
 window.onresize = initScenes;

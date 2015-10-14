@@ -72,6 +72,11 @@ a:hover {
 
 				> p {
 					margin-bottom: 15px;
+
+					&.info {
+						font-size: smaller;
+						line-height: 150%;
+					}
 				}
 
 				transition: opacity 0.25s linear 0.1s;
@@ -140,7 +145,7 @@ a:hover {
 
 	#info {
 		z-index: 90;
-		background: #dbbead;
+		background: lightgreen;
 
 		.mobile & {
 			position: static;
@@ -189,6 +194,17 @@ a:hover {
 					padding: 20px 0 115px 15px;
 					margin: 10px 0 0 0;
 					background: url(../img/triangle-green.png) no-repeat left top;
+				}
+			}
+
+			h2 {
+				text-transform: uppercase;
+				margin-bottom: 15px;
+				font-size: 18px;
+				font-weight: bold;
+
+				&:last-of-type {
+					margin-top: 40px;
 				}
 			}
 
@@ -285,6 +301,34 @@ a:hover {
 
 			@media (min-width: @screen-sm-min) {
 				height: 540px;
+			}
+		}
+	}
+
+	#tickets {
+		z-index: 60;
+		background: #62D09F;
+
+		h2 {
+			line-height: 150%;
+			margin-bottom: 40px;
+		}
+
+		form {
+			background: #fbfbfb;
+			padding: 20px;
+
+			table {
+				width: 100%;
+				margin-bottom: 20px;
+
+				thead th {
+					width: 20%;
+				}
+
+				tbody td {
+
+				}
 			}
 		}
 	}
