@@ -96,6 +96,7 @@ a:hover {
 
 		.mobile & {
 			position: static;
+			min-height: 0 !important;
 		}
 
 		> .container {
@@ -114,7 +115,6 @@ a:hover {
 
 				@media (max-width: @screen-xs-max) {
 					background-position-x: 100%;
-					height: 725px;
 				}
 			}
 
@@ -150,7 +150,6 @@ a:hover {
 
 		.mobile & {
 			position: static;
-			height: auto !important;
 		}
 
 		> .container {
@@ -181,7 +180,6 @@ a:hover {
 
 		.mobile & {
 			position: static;
-			height: auto !important;
 		}
 
 		> .container {
@@ -294,7 +292,6 @@ a:hover {
 
 		.mobile & {
 			position: static;
-			height: auto !important;
 		}
 
 		.band-details {
@@ -312,7 +309,6 @@ a:hover {
 
 		.mobile & {
 			position: static;
-			height: auto !important;
 		}
 
 		h2 {
@@ -324,8 +320,14 @@ a:hover {
 			background: #fbfbfb;
 			padding: 20px;
 			margin-bottom: 25px;
+			text-align: right;
 
-			table {
+			@media (max-width: @screen-xs-max) {
+				padding: 10px;
+			}
+
+			> table {
+				text-align: left;
 				width: 100%;
 				margin-bottom: 20px;
 
@@ -337,6 +339,11 @@ a:hover {
 
 				}
 			}
+
+			> p {
+				text-align: left;
+				margin-bottom: 10px;
+			}
 		}
 	}
 
@@ -346,7 +353,6 @@ a:hover {
 
 		.mobile & {
 			position: static;
-			height: auto !important;
 		}
 
 		> .container {

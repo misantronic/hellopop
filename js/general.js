@@ -19,14 +19,18 @@ function initScenes() {
 	body.css("height", bodyHeight);
 
 	//set start page height
-	$("#page-start").css("height", viewportHeight + "px");
+	$("#home").css("height", viewportHeight + "px");
 
 	if (window.innerWidth < 768) {
 		if (skr) skr.destroy();
 		body.addClass('mobile');
 
+		pages.css('min-height', viewportHeight);
+
 		return;
 	}
+
+	pages.css('min-height', 'none');
 
 	body.removeClass('mobile');
 
