@@ -94,7 +94,7 @@ a:hover {
 }
 @media (max-width: 767px) {
   #main #home > .container h1 {
-    background-position-x: 100%;
+    background-size: 100%;
   }
 }
 #main #home > .container .date {
@@ -106,7 +106,10 @@ a:hover {
 }
 @media (max-width: 767px) {
   #main #home > .container .date {
-    margin-left: -100px;
+    margin: -35vh 0 0 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
   }
 }
 #main #home > .container .links {
@@ -118,7 +121,10 @@ a:hover {
 }
 @media (max-width: 767px) {
   #main #home > .container .links {
-    margin-right: -59px;
+    margin: 35vh 0 0 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
   }
 }
 #main #info {
@@ -209,6 +215,12 @@ a:hover {
   text-transform: uppercase;
   cursor: pointer;
   font-weight: normal;
+}
+@media (max-width: 375px) {
+  #main #lineup > .container ul > li .band {
+    max-width: 175px;
+    white-space: nowrap;
+  }
 }
 #main #lineup > .container ul > li .band:before {
   content: '❯';

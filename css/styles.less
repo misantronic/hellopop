@@ -114,7 +114,7 @@ a:hover {
 				margin: 0;
 
 				@media (max-width: @screen-xs-max) {
-					background-position-x: 100%;
+					background-size: 100%;
 				}
 			}
 
@@ -126,7 +126,10 @@ a:hover {
 				text-transform: uppercase;
 
 				@media (max-width: @screen-xs-max) {
-					margin-left: -100px;
+					margin: -35vh 0 0 0;
+					left: 0;
+					width: 100%;
+					text-align: center;
 				}
 			}
 
@@ -138,7 +141,10 @@ a:hover {
 				text-transform: uppercase;
 
 				@media (max-width: @screen-xs-max) {
-					margin-right: -59px;
+					margin: 35vh 0 0 0;
+					left: 0;
+					width: 100%;
+					text-align: center;
 				}
 			}
 		}
@@ -240,6 +246,11 @@ a:hover {
 						text-transform: uppercase;
 						cursor: pointer;
 						font-weight: normal;
+
+						@media (max-width: 375px) {
+							max-width: 175px;
+							white-space: nowrap;
+						}
 
 						&:before {
 							content: '❯';
